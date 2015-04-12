@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <script src="../bower_components/angularjs/angular.js"></script>
+    <script src="Inheritence.js"></script>
+</head>
+<body ng-app = "inheritance">
+
+    <article ng-controller="ctrl1">
+        Inside Controller 1
+        {{userName}}
+        gender :  {{gender}}
+    </article>
+    <hr/>
+    <div ng-controller="ctrl2">
+        Inside Controller 2
+        {{userName}}
+    </div>
+
+</body>
+</html>

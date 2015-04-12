@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Demo</title>
+    <script src="../bower_components/angularjs/angular.js"></script>
+    <script src="./eventsBubbling.js"></script>
+</head>
+<body ng-app="eventHandlers">
+
+    <div ng-controller="ctrl01">
+        Please enter your name <input type="text" ng-model="userName">
+        <button ng-click = "raiseMyEvent()">Save user name</button>
+
+
+        <article ng-controller="ctrl02">
+            <h1>{{userName}}</h1>
+
+            <span ng-controller="ctrl03"></span>
+        </article>
+
+        <article ng-controller="ctrl02">
+            <h1>{{userName}}</h1>
+        </article>
+
+
+    </div>
+
+
+</body>
+</html>
