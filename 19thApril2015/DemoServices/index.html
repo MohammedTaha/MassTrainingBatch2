@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Demo Services</title>
+
+    <script src="../bower_components/angularjs/angular.js"></script>
+    <script src="./demoService.js"></script>
+</head>
+<body ng-app = "studentApp">
+
+    <div ng-controller="ctrl01">
+
+        <label>Name : <input type="text" ng-model = "student_name"></label>
+        <label>Age  : <input type="text" ng-model = "student_age"></label>
+        <button ng-click="saveStd()">Save Student</button>
+    </div>
+
+    <hr/>
+    <div ng-controller = "ctrl02">
+        <ul>
+            <li ng-repeat="s in allStudents">Student's name is {{s.name}} and age is {{s.age}}</li>
+        </ul>
+    </div>
+
+</body>
+</html>
