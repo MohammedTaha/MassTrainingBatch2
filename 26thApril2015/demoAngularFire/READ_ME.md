@@ -1,3 +1,6 @@
+Saylani Batch 2
+Reference links and commands for installing angular material and angularfire 
+
 installing angular material 
 command : bower install angular-material
 Reference link : https://github.com/angular/bower-material#bower

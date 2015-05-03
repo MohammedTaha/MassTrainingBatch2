@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css">
+
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-aria/angular-aria.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.js"></script>
+    <script src="./bower_components/angular-material/angular-material.js"></script>
+    <script src="./bower_components/firebase/firebase.js"></script>
+    <script src="./bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="./todo.js"></script>
+
+</head>
+<body ng-app="todo">
+
+    <div ng-controller="getUserDetails">
+
+        <md-content md-theme="docs-dark">
+            <md-input-container>
+                <label>Name</label>
+                <input ng-model="task.user">
+            </md-input-container>
+            <md-input-container>
+                <label>Desc</label>
+                <input ng-model="task.desc" type="text">
+            </md-input-container>
+        </md-content>
+        <md-button ng-click = "saveTask()" class="md-warn md-raised">Save Task</md-button>
+    </div>
+    <div ng-controller="showTodos">
+
+        <ul>
+            <li ng-repeat="m in messages">
+                {{m.user}} --
+                {{m.desc}} --
+                <md-button ng-click = "removeTask(m)" class="md-warn md-raised">X</md-button>
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+</html>
