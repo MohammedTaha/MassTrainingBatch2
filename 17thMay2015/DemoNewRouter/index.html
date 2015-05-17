@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../bower_components/angularjs/angular.js"></script>
+    <script src="../bower_components/angular-new-router/dist/router.es5.js"></script>
+    <script src="./index.js"></script>
+    <script src="./components/home/home.js"></script>
+    <script src="./components/about_us/about_us.js"></script>
+</head>
+<body ng-app = "demoNewRouter">
+
+    <div ng-controller="landingPageController">
+
+        <ul>
+            <li><a ng-link="#/">Home</a></li>
+            <li><a href="#/AboutUs">About us</a></li>
+        </ul>
+        <ng-viewport></ng-viewport>
+    </div>
+</body>
+</html>
