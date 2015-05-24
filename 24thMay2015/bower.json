@@ -1,0 +1,20 @@
+{
+  "name": "24thMay2015",
+  "version": "0.0.0",
+  "homepage": "https://github.com/MohammedTaha/MassTrainingBatch2",
+  "authors": [
+    "mtaha <stallion049@yahoo.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.3.15",
+    "angularfire": "~1.1.1"
+  }
+}
