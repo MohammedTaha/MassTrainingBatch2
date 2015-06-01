@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Demo Security Rules</title>
+
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/firebase/firebase.js"></script>
+    <script src="../bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="./index.js"></script>
+</head>
+<body ng-app="demoSecurityRules">
+    <div ng-controller="MainController as ctrl">
+        Enter Student Name : <input type="text" ng-model="ctrl.student.name"><br><br>
+        Enter Student Age : <input type="Number" ng-model="ctrl.student.age"><br><br>
+        <button ng-click="ctrl.SaveStudent()">Add Student</button>
+    </div>
+</body>
+</html>
