@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Revision Class</title>
+    <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css">
+
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-aria/angular-aria.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/angular-material/angular-material.js"></script>
+    <script src="../bower_components/angular-new-router/dist/router.es5.min.js"></script>
+
+    <script src="./app.js"></script>
+    <script src="./components/home/home.ctrl.js"></script>
+</head>
+<body ng-app="revision">
+
+    <div ng-controller="ctrl1 as c">
+
+        <div layout = 'row'>
+            <div flex = "30">
+                <md-button class="md-raised" ng-click="c.onClickBtn1();">Print</md-button><br/>
+
+                <md-input-container flex>
+                    <label>Biography</label>
+                    <textarea ng-model = "c.textAreaMessage"></textarea>
+                </md-input-container>
+            </div>
+            <div flex = "70">
+                <md-button ng-link="home">Default Link</md-button>
+<!--
+                <md-button class="md-raised">Go To Next Page</md-button>
+-->
+            </div>
+        </div>
+
+
+        <ng-viewport></ng-viewport>
+    </div>
+
+</body>
+</html>
