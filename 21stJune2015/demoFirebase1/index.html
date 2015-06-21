@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Firebase</title>
+
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/firebase/firebase.js"></script>
+    <script src="../bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="./demoFirebase1.js"></script>
+
+</head>
+<body ng-app="fbase">
+
+    <div ng-controller="controller01 as vm">
+        Name : <input type="text" ng-model="vm.user.name"><br/><br/>
+        Age : <input type="number" ng-model="vm.user.age"><br/><br/>
+        Roll #: <input type="number" ng-model="vm.user.rollNumber"><br/><br/>
+
+        <button ng-click="vm.saveData()"> Save Bio Data</button>
+    </div>
+
+    <hr>
+
+    <div ng-controller="controller02 as vm">
+        User Name : <input type="text" ng-model="vm.task.name"><br/><br/>
+        Description :<input type="text" ng-model="vm.task.desc"><br/><br/>
+        <button ng-click="vm.saveTask()"> Save Task </button>
+
+        <ul>
+            <li ng-repeat="tasks in vm.allTasks">{{tasks | json}}</li>
+        </ul>
+    </div>
+
+</body>
+</html>
