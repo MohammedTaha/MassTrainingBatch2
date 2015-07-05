@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> Demo - Auth  </title>
+
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/firebase/firebase.js"></script>
+    <script src="../bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="./index.js"></script>
+</head>
+<body ng-app="authSample">
+    <div ng-controller="authController as myCtrl">
+
+        <button ng-click="myCtrl.loginWithFB()">login With FB</button>
+        <br/>
+        <br/>
+        <div ng-show = "myCtrl.loggedInUser != null">
+            <button ng-click = "myCtrl.doLogout()">Log Out</button>
+            <br/>
+            <br/>
+            <img ng-src = "{{myCtrl.loggedInUserPic}}">
+        </div>
+
+    </div>
+</body>
+</html>

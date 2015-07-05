@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title> Demo - JS SDK  </title>
+
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/firebase/firebase.js"></script>
+    <script src="./index.js"></script>
+</head>
+<body ng-app="demoApp">
+    <div ng-controller="ctrl01 as ctrl">
+        <input type="text" ng-model = "ctrl.user.name" placeholder="User Name">
+        <input type="text" ng-model = "ctrl.user.message" placeholder="Message">
+        <button ng-click="ctrl.saveMessage()">Save</button>
+        <hr/>
+
+
+        <ul >
+            <li ng-repeat="msgObj in ctrl.messagesArray">MSG : {{msgObj.message}}</li>
+        </ul>
+    </div>
+</body>
+</html>

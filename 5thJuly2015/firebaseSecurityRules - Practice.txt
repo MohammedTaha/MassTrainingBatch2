@@ -1,0 +1,81 @@
+
+
+// anyone can read all users, only user them self can write
+"users" : {
+	"zia"  : {firstName : "", lastName : ""}
+	"taha" : {firstName : "", lastName : ""},
+	"atta" : {firstName : "", lastName : ""}
+}
+/*
+
+	rules : {
+		"users" : {
+			$user : {
+				".read" : "auth != null",
+				".write" : "auth != null && auth.uid == $user && newData.hasChildren(['firstName', 'lastName'])"
+			}
+		}
+	}
+
+*/
+
+
+
+// only group members can read and only group owners can write
+groups : {
+	syalani : {
+		key : "123456"
+	},
+	sirSyed : {
+		key : "12345678"
+	}
+}
+	
+	
+
+// only owners can write and members can read
+// owner = 1, member = 2
+userGroups = {
+	zia : {
+		saylani  : 1,
+		sirSyed  : 2
+	},
+	taha  : {
+		saylani  : 2,
+		sirSyed  : 1
+	}
+}
+
+
+
+
+//only owners can write and members can read
+//owner  = 1, member = 2
+groupMembers : {
+	saylani  : {
+		zia : 1,
+		atta  : 2
+	},
+	sirSyed  : {
+		zia : 2,
+		taha : 1
+	}
+}
+
+
+/*
+
+	"rules": {
+		"groupMembers" : {
+			"$group_3" : {
+				".read" 	: "auth != null && root.child('groupMembers').child($group_3).child(auth.uid).exists()",
+				".write" 	: "auth != null && root.child('groupMembers').child($group_3).child(auth.uid).val() == 1"
+			}
+		}
+	}
+
+*/
+
+
+
+
