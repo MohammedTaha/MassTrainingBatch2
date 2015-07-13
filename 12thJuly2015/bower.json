@@ -1,0 +1,16 @@
+{
+  "name": "12thJuly2015",
+  "version": "0.0.0",
+  "homepage": "https://github.com/MohammedTaha/MassTrainingBatch2",
+  "authors": [
+    "mtaha <stallion049@yahoo.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
