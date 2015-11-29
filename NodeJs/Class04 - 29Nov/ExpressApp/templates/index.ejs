@@ -1,0 +1,27 @@
+<!Doctype HTML>
+<html>
+
+	<head>
+		<title> Hello From Index </title>
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		<script>
+			var userAge = <%-age%>;
+			console.log("The age of user is " + userAge);
+		</script>
+		
+	</head>
+	
+	<body>
+		
+		<a href="/students">Redirect to Students</a><br/>
+		<img src="/images/logo.png"/>
+		<h1 class="well">
+			Hello <%=name%>, This is your Template
+		</h1>
+			<% for(var i = 0; i < 10; i++){%>
+				<h3> <%= rollNumber %> </h3>
+			<% }%>
+	</body>
+	
+</html>
+

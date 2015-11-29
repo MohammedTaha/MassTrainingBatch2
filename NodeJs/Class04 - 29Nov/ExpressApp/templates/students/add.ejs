@@ -1,0 +1,46 @@
+<!Doctype HTML>
+<html>
+
+	<head>
+		<title> Add Student </title>
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+	</head>
+	<body>
+		
+		<form method = "post" action = "/students">
+			<label>
+					Name : <input type="text" value ="" name = "studentName" autofocus required>
+			</label><br/><br/>
+			<label>
+					Father's Name : <input type="text" name = "fatherName" value ="" required>
+			</label><br/><br/>
+			<label>
+					Age : <input type="number" value ="" name = "age" required>
+			</label><br/><br/>
+			<button type="submit"> Add Student </button>	
+		</form>
+		
+		<br/><br/>
+	
+		<table class="table">
+			<thead>
+				<th>S No</th><th>Name </th><th>Father's Name </th><th>Age</th>
+			</thead>
+			<tbody>
+				<% data.forEach(function(d, i){ %> 
+					<tr>
+						<td> <%= i+1 %> </td>
+						<td> <%= d.studentName %> </td>
+						<td> <%= d.fatherName %> </td>
+						<td> <%= d.age %> </td>
+							
+					</tr>
+				<% }) %>
+				
+			</tbody>
+			
+		</table>
+		
+	</body>
+</html>
+
